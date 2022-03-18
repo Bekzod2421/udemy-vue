@@ -27,7 +27,7 @@
   <div @click="serShow">Service Show</div>
   <div class="myprod" v-if="pShow">
     <Prod @och="prodShow">
-      <div class="item" v-for="prod in prod">
+      <div class="item" v-for="prod in prod" :key="prod">
         <div class="title">Product {{ prod }}</div>
         <img src="./assets/logo.png" alt="" />
         <div class="price">1001</div>
@@ -36,7 +36,7 @@
   </div>
   <teleport to=".bek" v-if="sShow">
     <Prod @och="serShow">
-      <div class="item" v-for="prod in prod">
+      <div class="item" v-for="prod in prod" :key="prod">
         <div class="title">Service {{ prod }}</div>
         <img src="./assets/logo.png" alt="" />
         <div class="price">buy</div>
